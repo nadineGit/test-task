@@ -1,0 +1,50 @@
+//desktop
+@include large {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+//tablet + mobile
+@include middle {
+  html {
+    font-size: 45%;
+  }
+  .header_adaptive {
+    width: 100%;
+    background-size: cover!important;
+  }
+  .article {
+    &__img {
+      .article-img-link {
+        margin: 0 0 2.2rem;
+        float: none;
+        max-width: auto;
+      }
+    }
+  }
+  .more-btn {
+    padding: 0 2rem;
+  }
+}
+
+//mobile
+@include small {
+  .article__title:before {
+    display: none;
+  }
+  .comm-data, .comm-avatar {
+    width: 100%;
+    float: none;
+  }
+  .comm-avatar {
+    margin: 0 0 5px;
+    &__user {
+      max-width: 50px;
+    }
+  }
+  .wrapper {
+    padding: 4rem 3rem;
+  }
+}
+

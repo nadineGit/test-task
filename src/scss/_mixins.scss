@@ -1,0 +1,67 @@
+@mixin underline {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin transition($args) {
+  transition: $args;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
+@mixin large {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin middle {
+  @media (max-width: 767px)  {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 550px)  {
+    @content;
+  }
+}
+
+@mixin placeholder($color) {
+  &::-moz-placeholder {
+    text-overflow: ellipsis;
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    text-overflow: ellipsis;
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    text-overflow: ellipsis;
+    color: $color;
+  }
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+}
